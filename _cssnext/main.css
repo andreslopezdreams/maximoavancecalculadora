@@ -1,0 +1,10 @@
+@import "_calculator.css";
+
+:root {
+    --primaryColor: #fff;
+}
+
+
+body {
+    background-color: var(--primaryColor);
+}

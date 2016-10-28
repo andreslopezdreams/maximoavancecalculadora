@@ -1,0 +1,22 @@
+{
+  "name": "apoyo-economico",
+  "version": "1.0.0",
+  "description": "nuevalanding apoyo aconomico",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "apoyo",
+    "economico"
+  ],
+  "author": "Dreams",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2",
+    "postcss-nested": "^1.0.0"
+  }
+}
