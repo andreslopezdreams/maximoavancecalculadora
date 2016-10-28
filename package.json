@@ -13,7 +13,10 @@
   "author": "Dreams",
   "license": "ISC",
   "devDependencies": {
+    "cssnano": "^3.8.0",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.2.0",
     "postcss-cssnext": "^2.8.0",
     "postcss-import": "^8.1.2",
