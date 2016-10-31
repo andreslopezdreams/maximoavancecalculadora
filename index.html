@@ -20,7 +20,7 @@
         <form action="" class="mainForm">
             <fieldset class="mainForm__fieldset">
 
-                <div>
+                <div class="mainForm__mount">
                     <label class="mainForm__label" for="mount"> Monto del préstamo </label>
                     <span> $ </span>
                     <input type="text" class="input-control" id="mount">
@@ -31,10 +31,16 @@
                     <span class="mainForm__slide__title">Cantidad</span>
                 </div>
 
-                <div>
+                <div class="mainForm__slide_control">
                     <div id="demo-simple-slider" class="dragdealer">
-                        <div class="handle red-bar"><img src="https://i.imgsafe.org/3b13f916a9.png" alt="slider" width="40" height="40"></div>
+                        <div class="handle red-bar"><img src="https://i.imgsafe.org/3b13f916a9.png" alt="slider"
+                                                         width="40" height="40"></div>
                     </div>
+                </div>
+
+                <div class="mainForm__slide__mounts">
+                    <span>$1,500</span>
+                    <span>$50,000</span>
                 </div>
 
 
@@ -45,13 +51,13 @@
                 <div class="mainContent_options">
 
                     <input type="radio" id="weekly_payment" name="payment">
-                    <label for="weekly_payment">Semanal </label>
+                    <label for="weekly_payment">semanal </label>
 
                     <input type="radio" id="fortnightly_payment" name="payment">
-                    <label for="fortnightly_payment">Quincenal </label>
+                    <label for="fortnightly_payment">quincenal </label>
 
                     <input type="radio" id="monthly_payment" name="payment">
-                    <label for="monthly_payment">Mensual </label>
+                    <label for="monthly_payment">mensual </label>
                 </div>
             </fieldset>
 
@@ -103,22 +109,6 @@
 </div>
 
 <script src="https://skidding.github.io/dragdealer/src/dragdealer.js"></script>
-<script>
-    window.onload = function () {
-        console.log("hi");
-        new Dragdealer('demo-simple-slider', {
-            animationCallback: function (x, y) {
-                var lowVal = 1500;
-                var highVal = 50000;
-                var diff = highVal - lowVal;
-                var thisVal = (Math.round(x * diff) + lowVal);
-
-                document.getElementById('mount').value = thisVal;
-                console.log(thisVal);
-            }
-
-        });
-    }
-</script>
+<script src="assets/js/main.min.js"></script>
 </body>
 </html>

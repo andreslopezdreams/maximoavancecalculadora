@@ -1,16 +1,20 @@
-var postcss = require('gulp-postcss');
-var cssnext = require('postcss-cssnext');
-var nested = require('postcss-nested');
-var atImport = require("postcss-import");
-var concat = require('gulp-concat');
-var cssnano = require('cssnano');
-var notify = require('gulp-notify');
-var gulp = require('gulp');
+'use strict';
+
+const postcss = require('gulp-postcss'),
+    cssnext = require('postcss-cssnext'),
+    nested = require('postcss-nested'),
+    atImport = require("postcss-import"),
+    concat = require('gulp-concat'),
+    cssnano = require('cssnano'),
+    notify = require('gulp-notify'),
+    gulp = require('gulp'),
+    babel = require("gulp-babel"),
+    uglify = require('gulp-uglify');
 
 
-gulp.task('css', function () {
+gulp.task('css', () => {
     var processors = [
-        cssnext({browsers: ['last 1 version'], warnForDuplicates: false }),
+        cssnext({browsers: ['last 1 version'], warnForDuplicates: false}),
         nested(),
         atImport(),
         cssnano()
@@ -19,11 +23,23 @@ gulp.task('css', function () {
         .pipe(concat('main.min.css'))
         .pipe(postcss(processors))
         .pipe(gulp.dest('./assets/css'))
-        .pipe(notify({ message: 'Tarea Post css completa' }));
+        .pipe(notify({message: 'Tarea Post css completa'}));
 });
 
-gulp.task('watch', function () {
+gulp.task('js', () => {
+
+    return gulp.src('./_ecmascript/*.js')
+        .pipe(concat('main.min.js'))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('./assets/js'));
+});
+
+gulp.task('watch', () => {
     gulp.watch('_cssnext/*.css', ['css']);
+    gulp.watch('./_ecmascript/*.js', ['js']);
 });
 
 gulp.task('default', ['watch']);

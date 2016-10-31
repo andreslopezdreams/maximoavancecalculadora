@@ -57,6 +57,14 @@ fieldset {
 }
 
 
+.mainForm__slide__mounts span:nth-child(1) {
+    float: right;
+}
+
+.mainForm__slide__mounts span:nth-child(2) {
+    float: left;
+}
+
 .mainForm__label {
     color: var(--primaryColor);
     font-size: 1.8em;
