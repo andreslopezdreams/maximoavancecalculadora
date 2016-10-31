@@ -1,3 +1,10 @@
 :root {
-    --mainColor: orange;
+    --primaryColor: #813A96;
+    --secundaryColor: #F57C4F;
+    --inputBackgroundColor: #E7E8EA;
+    --pinkColor: #E84599;
+    --formBackgroundColor: #D2D3D5;
+    --controlColor: #D2D3D5;
+    --whiteColor: #FFFFF4;
+    --textColor: #434343;
 }

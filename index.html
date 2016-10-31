@@ -3,43 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body>
 <div class="container">
     <section class="secundary">
-        <span class="secundary__phrase"> ¡ El dinero que necesitas fácil y rápido ! </span>
-
+        <div class="secundary__phrase">
+            <span class="secundary__phrase__title--small">¡ El dinero que </span>
+            <span class="secundary__phrase__title--medium">necesita$ </span>
+            <span class="secundary__phrase__title--big">fácil y </span>
+            <span class="secundary__phrase__title--big">rápido </span>
+        </div>
     </section>
     <section class="mainContent">
-        <form action="" class="mainContent__form">
-            <fieldset class="mainContent__fieldset">
-                <label> Monto del préstamo </label>  <span> $ </span> <input type="text" class="mainContent_input"> <span> .00 pesos </span>
+        <form action="" class="mainForm">
+            <fieldset class="mainForm__fieldset">
+
+                <div>
+                    <label class="mainForm__label" for="mount"> Monto del préstamo </label>
+                    <span> $ </span>
+                    <input type="text" class="input-control" id="mount">
+                    <span> .00 pesos </span>
+                </div>
+
+                <div>
+                    <span class="mainForm__slide__title">Cantidad</span>
+                </div>
+
+                <div>
+                    <div id="demo-simple-slider" class="dragdealer">
+                        <div class="handle red-bar"><img src="https://i.imgsafe.org/3b13f916a9.png" alt="slider" width="40" height="40"></div>
+                    </div>
+                </div>
+
+
             </fieldset>
 
-            <fieldset class="mainContent__fieldset">
-                <label> ¿Cómo quieres pagar? </label> <div class="mainContent_options"> <input type="radio"> <label> Semanal </label>  <input type="radio"> <label> Quincenal </label> <input type="radio"> <label> Mensual </label>  </div>
+            <fieldset class="mainForm__fieldset">
+                <label class="mainForm__label"> ¿Cómo quieres pagar? </label>
+                <div class="mainContent_options">
+
+                    <input type="radio" id="weekly_payment" name="payment">
+                    <label for="weekly_payment">Semanal </label>
+
+                    <input type="radio" id="fortnightly_payment" name="payment">
+                    <label for="fortnightly_payment">Quincenal </label>
+
+                    <input type="radio" id="monthly_payment" name="payment">
+                    <label for="monthly_payment">Mensual </label>
+                </div>
             </fieldset>
 
-            <fieldset class="mainContent__fieldset">
-                <label> Selecciona el plazo </label>
-                <input type="text" class="mainContent_input"> <span> Semanas </span>
-            </fieldset>
+            <fieldset class="mainForm__fieldset">
+                <label class="mainForm__label" for="weeks"> Selecciona el plazo </label>
+                <input type="text" class="input-control" id="weeks">
+                <label> Semanas </label>
 
-            <fieldset>
-                <label> Taza de interés anual  </label> <label> CAT </label> <label> total a pagar </label>
-                <p> *Estos datos son informativos y pueden variar al momento de la contratación </p>
+                <span class="mainForm__slide__title">Cantidad</span>
+
+                <div>
+                    <label for="interest_rate"> Taza de interés anual </label>
+                    <input type="text" id="interest_rate" class="input-control">
+                    <label for="cat"> CAT </label>
+                    <input type="text" id="cat" class="input-control">
+                    <label for="total_payment"> Total a pagar </label>
+                    <input type="text" id="total_payment" class="input-control">
+                    <p class="text-info"> *Estos datos son informativos y pueden variar al momento de la
+                        contratación </p>
+                </div>
             </fieldset>
 
         </form>
-        <div class="mainContent__contact">
-            <h3> Ahora sólo dejanos tus datos y en breve nos comunicaremos contigo </h3>
+        <div class="mainContact">
+            <h3 class="mainContact__title"> Ahora sólo dejanos tus datos y en breve nos comunicaremos contigo. </h3>
             <form action="" class="mainContent-contact-form">
-                <input type="text" class="mainContent-contact-input">
+
+                <div>
+                    <input type="text" class="input-control" placeholder="*NOMBRE COMPLETO">
+                    <input type="text" class="input-control" placeholder="*EDAD">
+
+                    <input type="text" class="input-control" placeholder="*TELEFONO">
+
+                    <input type="radio" id="landline" name="phone"> <label for="landline">Fijo</label>
+                    <input type="radio" id="cellphone" name="phone"> <label for="cellphone">Celular</label>
+
+                    <select name="state" id="state" class="input-control">
+                        <option value="0">*SELECCIONE EL ESTADO</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar" class="mainContact__btnSend">
+                </div>
 
             </form>
         </div>
     </section>
 
 </div>
+
+<script src="https://skidding.github.io/dragdealer/src/dragdealer.js"></script>
+<script>
+    window.onload = function () {
+        console.log("hi");
+        new Dragdealer('demo-simple-slider', {
+            animationCallback: function (x, y) {
+                var lowVal = 1500;
+                var highVal = 50000;
+                var diff = highVal - lowVal;
+                var thisVal = (Math.round(x * diff) + lowVal);
+
+                document.getElementById('mount').value = thisVal;
+                console.log(thisVal);
+            }
+
+        });
+    }
+</script>
 </body>
 </html>
