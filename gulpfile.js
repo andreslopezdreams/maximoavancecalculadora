@@ -40,6 +40,7 @@ gulp.task('js', () => {
 gulp.task('watch', () => {
     gulp.watch('_cssnext/*.css', ['css']);
     gulp.watch('./_ecmascript/*.js', ['js']);
+
 });
 
 gulp.task('default', ['watch']);
