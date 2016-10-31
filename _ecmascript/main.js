@@ -40,7 +40,7 @@ class NumberUtils {
 }
 
 window.onload = () => {
-    console.log("entro");
+    console.log("inicio");
     let mainForm = new MainForm();
     mainForm.initPlugins();
 

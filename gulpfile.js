@@ -9,8 +9,15 @@ const postcss = require('gulp-postcss'),
     notify = require('gulp-notify'),
     gulp = require('gulp'),
     babel = require("gulp-babel"),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    connect = require('gulp-connect');
 
+gulp.task('connect', () => {
+    connect.server({
+        root: __dirname,
+        livereload: true
+    });
+});
 
 gulp.task('css', () => {
     var processors = [
@@ -23,6 +30,7 @@ gulp.task('css', () => {
         .pipe(concat('main.min.css'))
         .pipe(postcss(processors))
         .pipe(gulp.dest('./assets/css'))
+        .pipe(connect.reload())
         .pipe(notify({message: 'Tarea Post css completa'}));
 });
 
@@ -34,7 +42,8 @@ gulp.task('js', () => {
             presets: ['es2015']
         }))
         .pipe(uglify())
-        .pipe(gulp.dest('./assets/js'));
+        .pipe(gulp.dest('./assets/js'))
+        .pipe(connect.reload());
 });
 
 gulp.task('watch', () => {
@@ -43,4 +52,4 @@ gulp.task('watch', () => {
 
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['connect', 'watch']);
