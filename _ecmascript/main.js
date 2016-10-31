@@ -1,59 +1,68 @@
-class MainForm {
+var MainForm = function () {
 
-    constructor() {
-        this.mounInput = document.getElementById('mount');
-        this.weeksInput = document.getElementById('weeks');
+    var numberUtils = new NumberUtils();
 
-        this.mount = 0;
-        this.weeks = 0;
+    var montoInputText = document.getElementById('mount');
+    var semanasInputText = document.getElementById('weeks');
+
+    var tasaInteresAnualInputText = document.getElementById('');
+    var CATInputText = document.getElementById('');
+    var totalPagarInputText = document.getElementById('');
+
+
+
+
+    var monto, semanas;
+
+    this.init = function () {
+        initPlugins();
+        bindEvents();
     }
 
-    init() {
-        this.initPlugins();
-    }
+    function initPlugins() {
 
-    initPlugins() {
-
-        let mountDragdealer = new Dragdealer('slider-mount', {
-            animationCallback: (x, y) => {
+        var montoDragdealer = new Dragdealer('slider-mount', {
+            animationCallback: function (x, y) {
                 var lowVal = 1500;
                 var highVal = 50000;
                 var diff = highVal - lowVal;
                 var thisVal = (Math.round(x * diff) + lowVal);
-                this.mounInput.value = NumberUtils.moneyFormat(thisVal);
 
-                this.mount = thisVal;
+                montoInputText.value = numberUtils.moneyFormat(thisVal);
+                monto = thisVal;
 
-                console.log(this.mount);
+
             }
 
         });
 
-
-        let timelineDragdealer = new Dragdealer('slider-timelimit', {
-            animationCallback: (x, y) => {
+        var semanasDragdealer = new Dragdealer('slider-timelimit', {
+            animationCallback: function (x, y) {
                 var lowVal = 13;
                 var highVal = 52;
                 var diff = highVal - lowVal;
                 var thisVal = (Math.round(x * diff) + lowVal);
 
-                this.weeksInput.value = thisVal;
-                this.weeks = thisVal;
+                semanasInputText.value = numberUtils.moneyFormat(thisVal);
+                semanas = thisVal;
 
-                console.log(this.weeks);
             }
 
         });
 
+    }
+
+    function bindEvents() {
 
     }
-}
 
-class NumberUtils {
+};
 
-    static moneyFormat(number, decimalsNumber) {
+var NumberUtils = function () {
 
-        let decimals = isNaN(decimalsNumber = Math.abs(decimalsNumber)) ? 0 : decimalsNumber,
+    this.moneyFormat = function (number, decimalsNumber) {
+
+        var decimals = isNaN(decimalsNumber = Math.abs(decimalsNumber)) ? 0 : decimalsNumber,
             separatorDecimals = ".",
             separatorThousands = ",",
             convert1 = number < 0 ? "-" : "",
@@ -65,13 +74,10 @@ class NumberUtils {
             + (decimals ? separatorDecimals
             + Math.abs(number - convert2).toFixed(decimals).slice(2) : "");
     }
+};
 
-}
-
-window.onload = () => {
-    console.log("inicio");
-    let mainForm = new MainForm();
+window.onload = function () {
+    var mainForm = new MainForm();
     mainForm.init();
-
-
+    
 };
