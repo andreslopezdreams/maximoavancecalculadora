@@ -19,6 +19,11 @@ fieldset {
     height: 100%;
 }
 
+.container-bg {
+    background-color: var(--secundaryColor);
+    overflow: auto;
+}
+
 .form--medium {
     width: 80%;
 }
@@ -32,16 +37,16 @@ fieldset {
 }
 
 .input-control--name{
- width: 26.8em;
+
 }
 
 .input-control--age{
- width: 5em;
+
 }
 
 .mainContact__send {
-    width: 30%;
-    float: left;
+    width: 11em;
+    float: right;
     padding: 1.2em 0;
 }
 
@@ -55,7 +60,6 @@ fieldset {
     background-color: var(--secundaryColor);
     border: none;
     color: var(--whiteColor);
-    float: right;
     padding: 1.8em 1em;
     width: 7em;
 }
@@ -67,6 +71,7 @@ fieldset {
 }
 
 .mainContent {
+    background-color: var(--white);
     width: 70%;
     float: left;
 }
@@ -80,9 +85,25 @@ fieldset {
 
 .mainContact__form__holder {
     float: left;
-    width: 70%;
+    width: calc(100% - 12em);
 }
 
+.mainContact__form__info {
+    width: 33%;
+    float: left;
+}
+
+.mainContact__form__info__name, .mainContact__form__info__age {
+    float: left;
+}
+
+.mainContact__form__info__name {
+    width: 80%;
+}
+
+.mainContact__form__info__age {
+    width: 10%;
+}
 
 .mainForm__fieldset {
     padding: 2em 1em 1em;
@@ -131,7 +152,7 @@ fieldset {
 
 .mainContent_options {
  width: 16em;
- float: left;
+ float: right;
  padding: 0.8em 0;
 
 }
@@ -164,15 +185,28 @@ label.mainForm__calcs__label {
 
 .secundary {
     background-color: var(--secundaryColor);
+    color: var(--whiteColor);
     float: left;
     height: 100%;
     width: 30%;
 }
 
-.secundary__phrase {
-    color: var(--whiteColor);
-    padding: 2em 2em 0em 0em;
+.secundary__img {
     text-align: right;
+    padding: 1em 0em;
+}
+
+.secundary__promotion {
+    text-align: right;
+}
+
+.secundary__phrase {
+
+    text-align: right;
+}
+
+.secundary--padding {
+    padding: 2em 2em 0em 0em;
 }
 
 .secundary__phrase__title--big, .secundary__phrase__title--medium, .secundary__phrase__title--small {
@@ -202,6 +236,10 @@ label.mainForm__calcs__label {
 
 .u-form-padding {
     padding: 2em 1em 1em;
+}
+
+.u-no-border {
+    border: none;
 }
 
 /* OVERRIDE PLUGINS */

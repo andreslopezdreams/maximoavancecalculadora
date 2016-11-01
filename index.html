@@ -7,14 +7,26 @@
     <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body>
-<div class="container">
+<div class="container container-bg">
     <section class="secundary">
-        <div class="secundary__phrase">
-            <span class="secundary__phrase__title--small">¡ El dinero que </span>
-            <span class="secundary__phrase__title--medium">necesita$ </span>
-            <span class="secundary__phrase__title--big">fácil y </span>
-            <span class="secundary__phrase__title--big">rápido </span>
+
+        <div class="secundary--padding">
+            <div class="secundary__phrase">
+                <span class="secundary__phrase__title--small">¡ El dinero que </span>
+                <span class="secundary__phrase__title--medium">necesita$ </span>
+                <span class="secundary__phrase__title--big">fácil y </span>
+                <span class="secundary__phrase__title--big">rápido </span>
+            </div>
+
+            <div class="secundary__img">
+                <img src="https://www.apoyoeconomico.com.mx/img/landing/watch-shap.png" alt="clock">
+            </div>
+
+            <div class="secundary__promotion">
+                <span class="secundary__phrase__title--small">¡Sin Empeñar!</span>
+            </div>
         </div>
+
     </section>
     <section class="mainContent">
         <form action="" class="mainForm form--medium">
@@ -28,7 +40,7 @@
                 </div>
 
                 <div class="mainForm__slide__title">
-                    <span >Cantidad</span>
+                    <span>Cantidad</span>
                 </div>
 
                 <div class="mainForm__slide_control">
@@ -47,7 +59,7 @@
             </fieldset>
 
             <fieldset class="mainForm__fieldset">
-                <label class="mainForm__label mainForm__label--howPay"> ¿Cómo quieres pagar? </label>
+                <label class="mainForm__label mainForm__label--howPay u-no-border"> ¿Cómo quieres pagar? </label>
                 <div class="mainContent_options">
 
                     <input type="radio" id="weekly_payment" name="payment">
@@ -92,17 +104,34 @@
             <form action="" class="mainContact__form form--medium u-overflow u-form-padding">
 
                 <div class="mainContact__form__holder">
-                    <input type="text" class="input-control input-control--name" placeholder="*NOMBRE COMPLETO">
-                    <input type="text" class="input-control input-control--age" placeholder="*EDAD">
 
-                    <input type="text" class="input-control input-control--phone" placeholder="*TELEFONO">
+                    <div>
+                        <div class="mainContact__form__info__name">
+                            <input type="text" class="input-control input-control--name" placeholder="*NOMBRE COMPLETO">
+                        </div>
+                        <div class="mainContact__form__info__age">
+                            <input type="text" class="input-control input-control--age" placeholder="*EDAD">
+                        </div>
+                    </div>
 
-                    <input type="radio" id="landline" name="phone" class="input-radio"> <label for="landline">Fijo</label>
-                    <input type="radio" id="cellphone" name="phone" class="input-radio"> <label for="cellphone">Celular</label>
+                    <div>
+                        <div class="mainContact__form__info">
+                            <input type="text" class="input-control input-control--phone" placeholder="*TELEFONO">
+                        </div>
 
-                    <select name="state" id="state" class="input-control">
-                        <option value="0">*SELECCIONE EL ESTADO</option>
-                    </select>
+                        <div class="mainContact__form__info">
+                            <input type="radio" id="landline" name="phone" class="input-radio"> <label for="landline">Fijo</label>
+                            <input type="radio" id="cellphone" name="phone" class="input-radio"> <label for="cellphone">Celular</label>
+                        </div>
+
+                        <div class="mainContact__form__info">
+                            <select name="state" id="state" class="input-control">
+                                <option value="0">*SELECCIONE EL ESTADO</option>
+                            </select>
+                        </div>
+
+                    </div>
+
                 </div>
                 <div class="mainContact__send">
                     <input type="submit" value="Enviar" class="mainContact__btnSend">
