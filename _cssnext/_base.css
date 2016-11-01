@@ -40,7 +40,7 @@ fieldset {
 }
 
 .mainContact__send {
-    width: 7em;
+    width: 30%;
     float: left;
     padding: 1.2em 0;
 }
@@ -55,6 +55,7 @@ fieldset {
     background-color: var(--secundaryColor);
     border: none;
     color: var(--whiteColor);
+    float: right;
     padding: 1.8em 1em;
     width: 7em;
 }
@@ -76,9 +77,10 @@ fieldset {
     margin: 0 10px;
 }
 
+
 .mainContact__form__holder {
-    margin: 0 2em;
     float: left;
+    width: 70%;
 }
 
 
@@ -194,6 +196,13 @@ label.mainForm__calcs__label {
     color: var(--secundaryColor);
 }
 
+.u-overflow {
+    overflow: hidden;
+}
+
+.u-form-padding {
+    padding: 2em 1em 1em;
+}
 
 /* OVERRIDE PLUGINS */
 .dragdealer {
