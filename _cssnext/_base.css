@@ -19,6 +19,10 @@ fieldset {
     height: 100%;
 }
 
+.form--medium {
+    width: 80%;
+}
+
 .input-control {
     background-color: var(--inputBackgroundColor);
     border: none;
@@ -66,12 +70,13 @@ fieldset {
     float: left;
 }
 
+
+
 .mainForm__mount span {
     margin: 0 10px;
 }
 
 .mainContact__form__holder {
-    width: 34em;
     margin: 0 2em;
     float: left;
 }
@@ -92,12 +97,8 @@ fieldset {
     margin: 1.5em 0;
 }
 
-.mainForm__slide__mounts span:nth-child(1) {
-    float: right;
-}
-
 .mainForm__slide__mounts span:nth-child(2) {
-    float: left;
+    float: right;
 }
 
 .mainForm__label {
