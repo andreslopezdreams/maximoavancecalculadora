@@ -1,10 +1,12 @@
 html, body {
     height: 100%;
     width: 100%;
+    background: var(--white);
 }
 
 body {
     color: var(--textColor);
+    font-family:  'Yanone Kaffeesatz';
 }
 
 fieldset {
@@ -20,16 +22,38 @@ fieldset {
 .input-control {
     background-color: var(--inputBackgroundColor);
     border: none;
-    padding: 0.5em;
+    padding: 1em .5em;
+    margin-bottom: 1em;
+    transform: translateY(-0.4em);
 }
 
+.input-control--name{
+ width: 26.8em;
+}
+
+.input-control--age{
+ width: 5em;
+}
+
+.mainContact__send {
+    width: 7em;
+    float: left;
+    padding: 1.2em 0;
+}
+
+.input-control--phone {
+    margin-right: 0.8em;
+}
+
+
 .mainContact__btnSend {
+
     background-color: var(--secundaryColor);
     border: none;
     color: var(--whiteColor);
-    padding: 1.4em 1em;
+    padding: 1.8em 1em;
+    width: 7em;
 }
-
 .mainContact__title {
     background: var(--primaryColor);
     color: var(--whiteColor);
@@ -42,20 +66,31 @@ fieldset {
     float: left;
 }
 
-.mainForm__fieldset {
-    background: url('https://i.imgsafe.org/3a765746ae.png') no-repeat;
-    background-position: left center;
-    background-size: 2em;
-    padding: 2em 0em 1em 2em;
+.mainForm__mount span {
+    margin: 0 10px;
+}
 
+.mainContact__form__holder {
+    width: 34em;
+    margin: 0 2em;
+    float: left;
+}
+
+
+.mainForm__fieldset {
+    padding: 2em 1em 1em;
 }
 
 .mainForm__slide__title {
     color: var(--primaryColor);
     display: block;
     text-transform: uppercase;
+    margin:1em 0;
 }
 
+.mainForm__slide__mounts {
+    margin: 1.5em 0;
+}
 
 .mainForm__slide__mounts span:nth-child(1) {
     float: right;
@@ -67,7 +102,61 @@ fieldset {
 
 .mainForm__label {
     color: var(--primaryColor);
-    font-size: 1.8em;
+    font-size: 2em;
+    font-weight: 200;
+    padding: 0.1em 0;
+    width: 9em;
+    display: inline-block;
+    border-right: 1px solid var(--gray);
+    margin-right: 0.5em;
+}
+
+
+.mainForm__label:before{
+    content: '';
+    width:13px;
+    height: 26px;
+    display: inline-block;
+    background: url('../img/Flecha_1.png') no-repeat left center / auto;
+    position: relative;
+    left: -0.5em;
+}
+
+.mainForm__label--howPay {
+ float: left;
+}
+
+.mainContent_options {
+ width: 16em;
+ float: left;
+ padding: 0.8em 0;
+
+}
+
+.mainContent_options input {
+ margin: 0 11px;
+ border: none;
+}
+
+.mainForm__calcs {
+ padding: 1.1em;
+ margin: 1em 0;
+}
+
+label.mainForm__calcs__label {
+    font-size: 1.2em;
+    font-weight: 200;
+    margin: 0 0.5em;
+}
+
+
+.mainForm__slide__title,
+.mainForm__slide__mounts{
+ padding: 0 1.1em;
+}
+
+.mainForm__slide_control{
+ padding:0 1.1em;
 }
 
 .secundary {
@@ -108,12 +197,13 @@ fieldset {
 /* OVERRIDE PLUGINS */
 .dragdealer {
     position: relative;
-    height: 30px;
+    height: 15px;
     background: var(--controlColor);
+    padding:0 1.1em;
 }
 .dragdealer .handle {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
     cursor: pointer;
 }

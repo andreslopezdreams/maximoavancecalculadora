@@ -10,7 +10,9 @@ const postcss = require('gulp-postcss'),
     gulp = require('gulp'),
     babel = require("gulp-babel"),
     uglify = require('gulp-uglify'),
+    fontMagician = require('postcss-font-magician'),
     connect = require('gulp-connect');
+
 
 gulp.task('connect', () => {
     connect.server({
@@ -22,16 +24,21 @@ gulp.task('connect', () => {
 gulp.task('css', () => {
     var processors = [
         cssnext({browsers: ['last 1 version'], warnForDuplicates: false}),
+        fontMagician(),
         nested(),
         atImport(),
         cssnano()
     ];
+
     return gulp.src('./_cssnext/*.css')
         .pipe(concat('main.min.css'))
         .pipe(postcss(processors))
         .pipe(gulp.dest('./assets/css'))
         .pipe(connect.reload())
         .pipe(notify({message: 'Tarea Post css completa'}));
+
+
+
 });
 
 gulp.task('js', () => {

@@ -27,14 +27,14 @@
                     <span> .00 pesos </span>
                 </div>
 
-                <div>
-                    <span class="mainForm__slide__title">Cantidad</span>
+                <div class="mainForm__slide__title">
+                    <span >Cantidad</span>
                 </div>
 
                 <div class="mainForm__slide_control">
                     <div id="slider-mount" class="dragdealer">
-                        <div class="handle red-bar"><img src="https://i.imgsafe.org/3b13f916a9.png" alt="slider"
-                                                         width="40" height="40"></div>
+                        <div class="handle red-bar">
+                            <img src="/assets/img/peso.png" alt="slider" width="40" height="40"></div>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
             </fieldset>
 
             <fieldset class="mainForm__fieldset">
-                <label class="mainForm__label"> ¿Cómo quieres pagar? </label>
+                <label class="mainForm__label mainForm__label--howPay"> ¿Cómo quieres pagar? </label>
                 <div class="mainContent_options">
 
                     <input type="radio" id="weekly_payment" name="payment">
@@ -68,18 +68,18 @@
 
                 <span class="mainForm__slide__title">Cantidad</span>
 
-                <div>
+                <div class="mainForm__slide_control">
                     <div id="slider-timelimit" class="dragdealer">
-                        <div class="handle red-bar"><img src="https://i.imgsafe.org/3b13f916a9.png" alt="slider"
+                        <div class="handle red-bar"><img src="/assets/img/calendario.png" alt="slider"
                                                          width="40" height="40"></div>
                     </div>
                 </div>
-                <div>
-                    <label for="interest_rate"> Taza de interés anual </label>
+                <div class="mainForm__calcs">
+                    <label for="interest_rate" class="mainForm__calcs__label"> Taza de interés anual </label>
                     <input type="text" id="interest_rate" class="input-control">
-                    <label for="cat"> CAT </label>
+                    <label for="cat" class="mainForm__calcs__label"> CAT </label>
                     <input type="text" id="cat" class="input-control">
-                    <label for="total_payment"> Total a pagar </label>
+                    <label for="total_payment" class="mainForm__calcs__label"> Total a pagar </label>
                     <input type="text" id="total_payment" class="input-control">
                     <p class="text-info"> *Estos datos son informativos y pueden variar al momento de la
                         contratación </p>
@@ -89,22 +89,22 @@
         </form>
         <div class="mainContact">
             <h3 class="mainContact__title"> Ahora sólo dejanos tus datos y en breve nos comunicaremos contigo. </h3>
-            <form action="" class="mainContent-contact-form">
+            <form action="" class="mainContact__form">
 
-                <div>
-                    <input type="text" class="input-control" placeholder="*NOMBRE COMPLETO">
-                    <input type="text" class="input-control" placeholder="*EDAD">
+                <div class="mainContact__form__holder">
+                    <input type="text" class="input-control input-control--name" placeholder="*NOMBRE COMPLETO">
+                    <input type="text" class="input-control input-control--age" placeholder="*EDAD">
 
-                    <input type="text" class="input-control" placeholder="*TELEFONO">
+                    <input type="text" class="input-control input-control--phone" placeholder="*TELEFONO">
 
-                    <input type="radio" id="landline" name="phone"> <label for="landline">Fijo</label>
-                    <input type="radio" id="cellphone" name="phone"> <label for="cellphone">Celular</label>
+                    <input type="radio" id="landline" name="phone" class="input-radio"> <label for="landline">Fijo</label>
+                    <input type="radio" id="cellphone" name="phone" class="input-radio"> <label for="cellphone">Celular</label>
 
                     <select name="state" id="state" class="input-control">
                         <option value="0">*SELECCIONE EL ESTADO</option>
                     </select>
                 </div>
-                <div>
+                <div class="mainContact__send">
                     <input type="submit" value="Enviar" class="mainContact__btnSend">
                 </div>
 
