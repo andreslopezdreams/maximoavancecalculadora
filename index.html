@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link rel="stylesheet" href="assets/css/main.min.css">
@@ -35,7 +36,7 @@
                 <div class="mainForm__mount">
                     <label class="mainForm__label" for="mount"> Monto del préstamo </label>
                     <span> $ </span>
-                    <input type="text" class="input-control" id="mount">
+                    <input type="text" class="input-control u-translated-top" id="mount">
                     <span> .00 pesos </span>
                 </div>
 
@@ -58,7 +59,7 @@
 
             </fieldset>
 
-            <fieldset class="mainForm__fieldset">
+            <fieldset class="mainForm__fieldset u-no-padding-top">
                 <label class="mainForm__label mainForm__label--howPay u-no-border"> ¿Cómo quieres pagar? </label>
                 <div class="mainContent_options">
 
@@ -75,27 +76,47 @@
 
             <fieldset class="mainForm__fieldset">
                 <label class="mainForm__label" for="weeks"> Selecciona el plazo </label>
-                <input type="text" class="input-control" id="weeks">
+                <input type="text" class="input-control u-translated-top" id="weeks">
                 <label> Semanas </label>
 
                 <span class="mainForm__slide__title">Cantidad</span>
 
                 <div class="mainForm__slide_control">
                     <div id="slider-timelimit" class="dragdealer">
-                        <div class="handle red-bar"><img src="/assets/img/calendario.png" alt="slider"
-                                                         width="40" height="40"></div>
+                        <div class="handle red-bar">
+                            <img src="/assets/img/calendario.png" alt="slider" width="40" height="40">
+                        </div>
                     </div>
                 </div>
-                <div class="mainForm__calcs">
-                    <label for="interest_rate" class="mainForm__calcs__label"> Taza de interés anual </label>
-                    <input type="text" id="interest_rate" class="input-control">
-                    <label for="cat" class="mainForm__calcs__label"> CAT </label>
-                    <input type="text" id="cat" class="input-control">
-                    <label for="total_payment" class="mainForm__calcs__label"> Total a pagar </label>
-                    <input type="text" id="total_payment" class="input-control">
-                    <p class="text-info"> *Estos datos son informativos y pueden variar al momento de la
-                        contratación </p>
+
+                <div class="mainForm__slide__timeline">
+                    <span>13</span>
+                    <span>26</span>
+                    <span>39</span>
+                    <span>52</span>
                 </div>
+
+                <div class="mainForm__calcs">
+
+                    <div class="mainForm__calcs__fields mainForm__calcs__fields--rate">
+                        <label for="interest_rate" class="mainForm__calcs__label"> Taza de interés anual </label>
+                        <input type="text" id="interest_rate" class="input-control">
+                    </div>
+
+                    <div class="mainForm__calcs__fields mainForm__calcs__fields--cat">
+                        <label for="cat" class="mainForm__calcs__label"> CAT </label>
+                        <input type="text" id="cat" class="input-control">
+                    </div>
+
+                    <div class="mainForm__calcs__fields mainForm__calcs__fields--total">
+                        <label for="total_payment" class="mainForm__calcs__label"> Total a pagar </label>
+                        <input type="text" id="total_payment" class="input-control">
+                    </div>
+
+                </div>
+
+                <p class="text-info u-clear"> *Estos datos son informativos y pueden variar al momento de la
+                    contratación </p>
             </fieldset>
 
         </form>
@@ -103,38 +124,47 @@
             <h3 class="mainContact__title"> Ahora sólo dejanos tus datos y en breve nos comunicaremos contigo. </h3>
             <form action="" class="mainContact__form form--medium u-overflow u-form-padding">
 
-                <div class="mainContact__form__holder">
+                <div class="mainContact__form__wrap">
+                    <div class="mainContact__form__holder u-overflow">
 
-                    <div>
-                        <div class="mainContact__form__info__name">
-                            <input type="text" class="input-control input-control--name" placeholder="*NOMBRE COMPLETO">
+                        <div>
+                            <div class="mainContact__form__info__name">
+                                <input type="text" class="input-control input-control--name"
+                                       placeholder="*NOMBRE COMPLETO">
+                            </div>
+                            <div class="mainContact__form__info__age">
+                                <input type="text" class="input-control input-control--age" placeholder="*EDAD">
+                            </div>
                         </div>
-                        <div class="mainContact__form__info__age">
-                            <input type="text" class="input-control input-control--age" placeholder="*EDAD">
+
+                        <div class="u-clear">
+                            <div class="mainContact__form__info">
+                                <input type="text" class="input-control input-control--phone" placeholder="*TELEFONO">
+                            </div>
+
+                            <div class="mainContact__form__info">
+                                <input type="radio" id="landline" name="phone" class="input-radio"> <label
+                                    for="landline">Fijo</label>
+                                <input type="radio" id="cellphone" name="phone" class="input-radio"> <label
+                                    for="cellphone">Celular</label>
+                            </div>
+
+                            <div class="mainContact__form__info">
+                                <select name="state" id="state" class="input-control u-input-full-width">
+                                    <option value="0">*SELECCIONE EL ESTADO</option>
+                                </select>
+                            </div>
+
                         </div>
+
                     </div>
-
-                    <div>
-                        <div class="mainContact__form__info">
-                            <input type="text" class="input-control input-control--phone" placeholder="*TELEFONO">
-                        </div>
-
-                        <div class="mainContact__form__info">
-                            <input type="radio" id="landline" name="phone" class="input-radio"> <label for="landline">Fijo</label>
-                            <input type="radio" id="cellphone" name="phone" class="input-radio"> <label for="cellphone">Celular</label>
-                        </div>
-
-                        <div class="mainContact__form__info">
-                            <select name="state" id="state" class="input-control">
-                                <option value="0">*SELECCIONE EL ESTADO</option>
-                            </select>
-                        </div>
-
+                    <div class="mainContact__send">
+                        <input type="submit" value="Enviar" class="mainContact__btnSend">
                     </div>
-
-                </div>
-                <div class="mainContact__send">
-                    <input type="submit" value="Enviar" class="mainContact__btnSend">
+                    <div class="u-clear mainContact__notice">
+                        <a href="https://www.apoyoeconomico.com.mx/aviso-privacidad.html" target="_blank">Consulta aquí
+                            nuestro aviso de privacidad</a>
+                    </div>
                 </div>
 
             </form>
