@@ -14,6 +14,10 @@ fieldset {
 
 }
 
+select {
+    height: 50px;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -138,6 +142,7 @@ fieldset {
 
 .mainContact__form__info {
     float: left;
+    text-align: center;
 }
 
 .mainContact__form__info:nth-child(1) {
@@ -151,6 +156,19 @@ fieldset {
 .mainContact__form__info:nth-child(3) {
     float: right;
     width: 40%;
+}
+
+.mainContact__form__info__tel {
+    display: inline-block;
+    padding: 0em 0.5em;
+    text-align: center;
+}
+
+
+.mainContact__form__info__tel label {
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
 }
 
 .mainForm__fieldset {
@@ -434,6 +452,11 @@ label.mainForm__calcs__label {
 
     .input-control--phone {
         width: 100%;
+    }
+
+    .mainContact__form__info:nth-child(2) {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .mainContact__form__info:nth-child(3) {
