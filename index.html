@@ -63,13 +63,16 @@
                 <label class="mainForm__label mainForm__label--howPay u-no-border"> ¿Cómo quieres pagar? </label>
                 <div class="mainContent_options">
 
-                    <input type="radio" id="weekly_payment" name="payment">
+                    <input type="radio" id="weekly_payment" name="payment" class="custom-radio">
+                    <label for="weekly_payment" class="custom-radio-label custom-label-payment"></label>
                     <label for="weekly_payment">semanal </label>
 
-                    <input type="radio" id="fortnightly_payment" name="payment">
+                    <input type="radio" id="fortnightly_payment" name="payment" class="custom-radio">
+                    <label for="fortnightly_payment" class="custom-radio-label custom-label-payment"></label>
                     <label for="fortnightly_payment">quincenal </label>
 
-                    <input type="radio" id="monthly_payment" name="payment">
+                    <input type="radio" id="monthly_payment" name="payment" class="custom-radio">
+                    <label for="monthly_payment" class="custom-radio-label custom-label-payment"></label>
                     <label for="monthly_payment">mensual </label>
                 </div>
             </fieldset>
@@ -151,7 +154,24 @@
 
                             <div class="mainContact__form__info">
                                 <select name="state" id="state" class="input-control u-input-full-width">
-                                    <option value="0">*SELECCIONE EL ESTADO</option>
+                                    <option value="-1">*SELECCIONE EL ESTADO</option>
+                                    <option value="1">AGUASCALIENTES</option>
+                                    <option value="4">CAMPECHE</option>
+                                    <option value="7">CHIAPAS</option>
+                                    <option value="9">CDMX</option>
+                                    <option value="11">GUANAJUATO</option>
+                                    <option value="12">GUERRERO</option>
+                                    <option value="13">HIDALGO</option>
+                                    <option value="14">JALISCO</option>
+                                    <option value="15">MEXICO</option>
+                                    <option value="16">MICHOACAN DE OCAMPO</option>
+                                    <option value="17">MORELOS</option>
+                                    <option value="22">QUERETARO ARTEAGA</option>
+                                    <option value="23">QUINTANA ROO</option>
+                                    <option value="24">SAN LUIS POTOSI</option>
+                                    <option value="28">TAMAULIPAS</option>
+                                    <option value="30">VERACRUZ</option>
+                                    <option value="31">YUCATAN</option>
                                 </select>
                             </div>
 

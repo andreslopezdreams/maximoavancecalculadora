@@ -24,6 +24,29 @@ fieldset {
     overflow: auto;
 }
 
+.custom-radio {
+    display: none;
+}
+
+.custom-radio:checked + .custom-radio-label {
+    background-color: var(--primaryColor);
+
+}
+
+.custom-radio-label {
+    background-color: var(--gray);
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.custom-label-payment {
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-bottom: -4px;
+}
+
 .form--medium {
     width: 95%;
 }
@@ -33,7 +56,7 @@ fieldset {
     border: none;
     padding: 1em .5em;
     margin-bottom: 1em;
-
+    outline: none;
 }
 
 .input-control--name, .input-control--age{
@@ -418,6 +441,15 @@ label.mainForm__calcs__label {
         width: 98%;
     }
 
+    .mainContact__send {
+        float: none;
+        width: 100%;
+    }
+
+    .mainContact__btnSend {
+        margin-right: .8em;
+    }
+
 
 }
 
@@ -462,10 +494,29 @@ label.mainForm__calcs__label {
     }
 
 
-
-
 }
 
+@media only screen and (max-width: 460px) {
+
+    .mainForm__calcs__fields--rate, .mainForm__calcs__fields--cat, .mainForm__calcs__fields--total {
+        float: none;
+        width: 100%;
+    }
+
+    .mainForm__calcs__fields--rate input, .mainForm__calcs__fields--cat input, .mainForm__calcs__fields--total input {
+        display: block;
+        width: 98%;
+    }
+
+    .mainForm__calcs__fields--total {
+        text-align: left;
+    }
+
+    .mainContact__form__wrap {
+        padding: 1em 1.5em 1em 1em;
+    }
+
+}
 
 
 @media only screen and  (min-width: 1400px) {
