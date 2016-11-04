@@ -1,1 +1,523 @@
-@font-face{font-family:Yanone Kaffeesatz;font-style:normal;font-weight:200;src:local("Yanone Kaffeesatz ExtraLight"),local(YanoneKaffeesatz-ExtraLight),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRWq2CVSYRrhnN0MLOqfxTW0.eot#) format("eot"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRQqftcMOL_w0yR9WY4zwDNA.woff2) format("woff2"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRYa6iXjgqaxY3DU3RqApPOI.woff) format("woff")}@font-face{font-family:Yanone Kaffeesatz;font-style:normal;font-weight:300;src:local("Yanone Kaffeesatz Light"),local(YanoneKaffeesatz-Light),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRWTXtl1c-F3iJbb1BFQFj0g.eot#) format("eot"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRcITWGgmQvtcmgaGakhz0f4.woff2) format("woff2"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRVMR8FhBa8rkfAKaPBwAU3s.woff) format("woff")}@font-face{font-family:Yanone Kaffeesatz;font-style:normal;font-weight:400;src:local("Yanone Kaffeesatz Regular"),local(YanoneKaffeesatz-Regular),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/YDAoLskQQ5MOAgvHUQCcLbcQawGFB1zaa2VYh64hVv8.eot#) format("eot"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2) format("woff2"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/YDAoLskQQ5MOAgvHUQCcLRTHiN2BPBirwIkMLKUspj4.woff) format("woff")}@font-face{font-family:Yanone Kaffeesatz;font-style:normal;font-weight:700;src:local("Yanone Kaffeesatz Bold"),local(YanoneKaffeesatz-Bold),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRV9v2LUGHTMs1d0N_ux_BpI.eot#) format("eot"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRfZL2QQ6ZygscP6wIFo8mp8.woff2) format("woff2"),url(//fonts.gstatic.com/s/yanonekaffeesatz/v7/We_iSDqttE3etzfdfhuPRWwXwFHHZlCwprwJOQ-Se7k.woff) format("woff")}body,html{height:100%;width:100%;background:#fff}body{color:#434343;font-family:Yanone Kaffeesatz}fieldset{border:0}select{height:50px}.container{width:100%;height:100%}.container-bg{background-color:#f57c4f;overflow:auto}.custom-radio{display:none}.custom-radio:checked+.custom-radio-label{background-color:#813a96}.custom-radio-label{background-color:#bcbdc0;border-radius:50%;display:inline-block;height:20px;width:20px}.custom-label-payment{margin-right:10px;margin-left:5px;margin-bottom:-4px}.form--medium{width:95%}.input-control{background-color:#e7e8ea;border:none;padding:1em .5em;margin-bottom:1em;outline:none}.input-control--age,.input-control--name{width:100%}.mainContact__send{width:16%;float:right;padding:1.2em 0;text-align:right}.mainContact__form__wrap{padding:0 3.3em 0 1.6em}.mainContact__form__info__name{width:76%;float:left}.mainContact__form__info__age{width:20%;float:right}.mainContact__notice{text-align:right;padding:2em 1em 1em}.mainContact__notice a,.mainContact__notice a:hover{color:#434343}.input-control--phone{margin-right:.8em;width:80%}.mainContact__btnSend{background-color:#f57c4f;border:none;color:#fffff4;padding:1.8em 1em;width:7em}.mainContact__title{background:#813a96;color:#fffff4;font-size:2em;font-weight:300;padding:.4em 1em}.mainContent{background-color:#fff;min-height:100%;width:70%;float:left}.mainForm__mount span{margin:0 10px}.mainContact__form__holder{width:82%;float:left}.mainContact__form__info{float:left;text-align:center}.mainContact__form__info:nth-child(1){width:33%}.mainContact__form__info:nth-child(2){width:20%}.mainContact__form__info:nth-child(3){float:right;width:40%}.mainContact__form__info__tel{display:inline-block;padding:0 .5em;text-align:center}.mainContact__form__info__tel label{text-transform:uppercase;display:block;margin-top:4px}.mainForm__fieldset{padding:2em 1em 1em}.mainForm__slide__title{color:#813a96;display:block;text-transform:uppercase;margin:1em 0}.mainForm__slide__mounts,.mainForm__slide__timeline{margin:1.5em 0;margin-bottom:0}.mainForm__slide__mounts span:nth-child(2){float:right}.mainForm__slide__timeline span{display:inline-block;width:24%}.mainForm__slide__timeline span:nth-child(2),.mainForm__slide__timeline span:nth-child(3){text-align:center}.mainForm__slide__timeline span:nth-child(4){text-align:right;float:right}.mainForm__label{color:#813a96;font-size:2em;font-weight:200;padding:.1em 0;width:9em;display:inline-block;border-right:1px solid #bcbdc0;margin-right:.5em}.mainForm__label:before{content:'';width:13px;height:26px;display:inline-block;background:url(../img/Flecha_1.png) no-repeat 0/auto;position:relative;left:-.5em}.mainForm__label--howPay{float:left}.mainContent_options{width:16em;float:right;padding:.8em 0}.mainContent_options input{margin:0 11px;border:none}.mainForm__calcs{padding:1.1em;margin:1em 0}.mainForm__calcs__fields--rate{width:40%;float:left}.mainForm__calcs__fields--rate input{max-width:40%}.mainForm__calcs__fields--cat{width:20%;float:left}.mainForm__calcs__fields--cat input{max-width:50%}.mainForm__calcs__fields--total{width:40%;float:right;text-align:right}.mainForm__calcs__fields--total input{max-width:90%}label.mainForm__calcs__label{font-size:1.2em;font-weight:200;margin:0 .5em}.mainForm__slide__mounts,.mainForm__slide__timeline,.mainForm__slide__title,.mainForm__slide_control{padding:0 1.1em}.secundary{background-color:#f57c4f;color:#fffff4;float:left;height:100%;width:30%}.secundary__img{padding:1em 0}.secundary__img,.secundary__phrase,.secundary__promotion{text-align:right}.secundary--padding{padding:2em 2em 0 0}.secundary__phrase__title--big,.secundary__phrase__title--medium,.secundary__phrase__title--small{display:block;text-transform:uppercase}.secundary__phrase__title--big{font-size:4.2em}.secundary__phrase__title--medium{font-size:2.6em}.secundary__phrase__title--small{font-size:2em}.text-info{color:#f57c4f}.u-input-full-width{max-width:100%;width:100%}.u-clear{clear:both}.u-overflow{overflow:hidden}.u-form-padding{padding:2em 1em 1em}.u-no-padding-top{padding-top:0}.u-no-border{border:none}.u-translated-top{transform:translateY(-.4em)}.dragdealer{position:relative;height:15px;background:#d2d3d5;padding:0 1.1em}.dragdealer .handle{position:absolute;top:-10px;left:0;cursor:pointer}.dragdealer .disabled{background:#898989}@media only screen and (max-width:769px){.container-bg{overflow-x:hidden}.secundary{width:25%}.mainContent{width:75%}}@media only screen and (max-width:1175px){.mainForm__calcs__fields--rate input{width:25%}.mainForm__calcs__fields--cat input{max-width:38%}.mainForm__calcs__fields--total input{width:45%}}@media only screen and (max-width:960px){.mainForm__calcs__fields--cat input,.mainForm__calcs__fields--rate input,.mainForm__calcs__fields--total input{width:100%;max-width:80%}.mainForm__label--howPay{float:none}.mainContent_options{float:none;padding:1em 0}.mainContact__form__holder{width:100%}.mainContact__form__info__age,.mainContact__form__info__name{float:none;width:95%}.mainContact__form__info{float:none}.mainContact__form__info:nth-child(1){width:95%}.input-control--phone{width:100%}.mainContact__form__info:nth-child(2){width:100%;margin-bottom:10px}.mainContact__form__info:nth-child(3){float:none;width:98%}.mainContact__send{float:none;width:100%}.mainContact__btnSend{margin-right:.8em}}@media only screen and (max-width:834px){.mainForm__label{display:block;margin-bottom:.5em}}@media only screen and (max-width:680px){.mainContent,.secundary{float:none;width:100%}.secundary{height:auto}.secundary__phrase__title--small{display:inline-block}.secundary__phrase__title--big,.secundary__phrase__title--medium{display:inline-block;font-size:2em}.secundary__img,.secundary__phrase,.secundary__promotion{text-align:center}.secundary__img img{max-width:120px}.secundary--padding{padding:1em}}@media only screen and (max-width:460px){.mainForm__calcs__fields--cat,.mainForm__calcs__fields--rate,.mainForm__calcs__fields--total{float:none;width:100%}.mainForm__calcs__fields--cat input,.mainForm__calcs__fields--rate input,.mainForm__calcs__fields--total input{display:block;width:98%}.mainForm__calcs__fields--total{text-align:left}.mainContact__form__wrap{padding:1em 1.5em 1em 1em}}@media only screen and (min-width:1400px){.form--medium{width:80%}}@media only screen and (min-width:1800px){.mainForm__calcs__fields--rate input{width:53%;max-width:100%}.mainForm__calcs__fields--cat input{max-width:60%}.mainForm__calcs__fields--total input{width:65%}}@media (min-width:2400px){.mainForm__calcs__fields--rate input{width:63%;max-width:100%}.mainForm__calcs__fields--cat input{max-width:68%}.mainForm__calcs__fields--total input{width:78%}}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #434343;
+}
+fieldset {
+    border: 0;
+
+}
+select {
+    height: 50px;
+}
+.container, .calculator-container {
+    width: 100%;
+    height: 100%;
+}
+.container-bg, .calculator-container-bg {
+    background-color: #F57C4F;
+    overflow: auto;
+}
+.custom-radio {
+    display: none;
+}
+.custom-radio:checked + .custom-radio-label {
+    background-color: #813A96;
+
+}
+.custom-radio-label {
+    background-color: #bcbdc0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+.custom-label-payment {
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-bottom: -4px;
+}
+.form--medium {
+    width: 95%;
+}
+.input-control {
+    background-color: #E7E8EA;
+    border: none;
+    font-size: 1em;
+    padding: 1em .5em;
+    margin-bottom: 1em;
+    outline: none;
+
+}
+.input-control::-webkit-input-placeholder {
+    color: #434343;
+}
+.input-control::-moz-placeholder {
+    color: #434343;
+    opacity:  1;
+}
+.input-control::-moz-placeholder {
+    color: #434343;
+    opacity:  1;
+}
+.input-control:-ms-input-placeholder {
+    color: #434343;
+}
+.input-control--name, .input-control--age{
+    width: 100%;
+}
+.mainContact__send {
+    width: 16%;
+    float: right;
+    padding: 1.2em 0;
+    text-align: right;
+}
+.mainContact__form__wrap {
+    padding: 0 3.3em 0em 1.6em;
+}
+.mainContact__form__info__name {
+    width: 76%;
+    float: left;
+}
+.mainContact__form__info__age {
+    width: 20%;
+    float: right;
+}
+.mainContact__notice {
+    text-align: right;
+    padding: 2em 1em 1em;
+}
+.mainContact__notice a, .mainContact__notice a:hover {
+    color: #434343;
+}
+.input-control--phone {
+    margin-right: 0.8em;
+    width: 88%;
+}
+.mainContact__btnSend {
+
+    background-color: #F57C4F;
+    border: none;
+    color: #FFFFF4;
+    padding: 1.8em 1em;
+    width: 7em;
+}
+.mainContact__title {
+    background: #813A96;
+    color: #FFFFF4;
+    font-size: 2em;
+    font-weight: 300;
+    padding: .4em 1em;
+}
+.mainContent {
+    background-color: #fff;
+    min-height: 100%;
+    width: 70%;
+    float: left;
+}
+.mainForm__mount span {
+    margin: 0 10px;
+}
+.mainContact__form__holder {
+    width: 82%;
+    float: left;
+}
+.mainContact__form__info {
+    float: left;
+
+}
+.mainContact__form__info:nth-child(1) {
+    width: 33%;
+}
+.mainContact__form__info:nth-child(2) {
+    width: 20%;
+}
+.mainContact__form__info:nth-child(3) {
+    float: right;
+    width: 40%;
+}
+.mainContact__form__info__tel {
+    display: inline-block;
+    padding: 0em 0.5em;
+    text-align: center;
+}
+.mainContact__form__info__tel label {
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+}
+.mainForm__fieldset {
+    padding: 2em 1em 1em;
+}
+.mainForm__slide__title {
+    color: #813A96;
+    display: block;
+    text-transform: uppercase;
+    margin:1em 0;
+}
+.mainForm__slide__mounts, .mainForm__slide__timeline {
+    margin: 1.5em 0;
+    margin-bottom: 0px;
+}
+.mainForm__slide__mounts span:nth-child(2) {
+    float: right;
+}
+.mainForm__slide__timeline span {
+    display: inline-block;
+    width: 24%;
+}
+.mainForm__slide__timeline span:nth-child(2), .mainForm__slide__timeline span:nth-child(3) {
+    text-align: center;
+}
+.mainForm__slide__timeline span:nth-child(4) {
+    text-align: right;
+    float: right;
+}
+.mainForm__label {
+    color: #813A96;
+    font-size: 2em;
+    font-weight: 200;
+    padding: 0.1em 0;
+    min-width: 9em;
+    display: inline-block;
+    border-right: 1px solid #bcbdc0;
+    margin-right: 0.5em;
+}
+.mainForm__label:before{
+    content: '';
+    width:13px;
+    height: 26px;
+    display: inline-block;
+    background: url('../img/Flecha_1.png') no-repeat left center / auto;
+    position: relative;
+    left: -0.5em;
+}
+.mainForm__label--howPay {
+ float: left;
+}
+.mainContent_options {
+ width: 18em;
+ float: right;
+ padding: 0.8em 0;
+
+}
+.mainContent_options input {
+ margin: 0 11px;
+ border: none;
+}
+.mainForm__calcs {
+ padding: 1.1em;
+ margin: 1em 0;
+}
+.mainForm__calcs__fields--rate {
+    width: 40%;
+    float: left;
+}
+.mainForm__calcs__fields--rate input {
+    max-width: 40%;
+}
+.mainForm__calcs__fields--cat {
+    width: 20%;
+    float: left;
+}
+.mainForm__calcs__fields--cat input {
+    max-width: 50%;
+}
+.mainForm__calcs__fields--total {
+    width: 40%;
+    float: right;
+    text-align: right;
+}
+.mainForm__calcs__fields--total input {
+    max-width: 90%;
+}
+label.mainForm__calcs__label {
+    font-size: 1.2em;
+    font-weight: 200;
+    margin: 0 0.5em;
+}
+.mainForm__slide__title,
+.mainForm__slide__mounts,
+.mainForm__slide__timeline  {
+ padding: 0 1.1em;
+}
+.mainForm__slide_control{
+ padding:0 1.1em;
+}
+.secundary {
+    background-color: #F57C4F;
+    color: #FFFFF4;
+    float: left;
+    height: 100%;
+    width: 30%;
+}
+.secundary__img {
+    text-align: right;
+    padding: 1em 0em;
+}
+.secundary__promotion {
+    text-align: right;
+}
+.secundary__phrase {
+
+    text-align: right;
+}
+.secundary--padding {
+    padding: 6.2em 2em 0em 0em;
+}
+.secundary__phrase__title--big, .secundary__phrase__title--medium, .secundary__phrase__title--small {
+    display: block;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.secundary__phrase__title--big {
+    font-size: 4.2em;
+}
+.secundary__phrase__title--medium {
+    font-size: 2.6em;
+}
+.secundary__phrase__title--small {
+    font-size: 2em;
+}
+.text-info {
+    color: #F57C4F;
+}
+.u-input-full-width {
+    max-width: 100%;
+    width: 100%;
+}
+.u-clear {
+    clear: both;
+}
+.u-overflow {
+    overflow: hidden;
+}
+.u-form-padding {
+    padding: 2em 1em 1em;
+}
+.u-no-padding-top {
+    padding-top: 0px;
+}
+.u-no-border {
+    border: none;
+}
+.u-translated-top {
+    transform: translateY(-0.4em);
+}
+/* OVERRIDE PLUGINS */
+.dragdealer {
+    position: relative;
+    height: 15px;
+    background: #D2D3D5;
+    padding:0 1.1em;
+}
+.dragdealer .handle {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    cursor: pointer;
+}
+.handle {
+    background-color: transparent;
+    width: 40px !important;
+}
+.dragdealer .disabled {
+    background: #898989;
+}
+@media only screen and (max-width: 769px) {
+
+    .container-bg {
+        overflow-x: hidden;
+    }
+
+    .secundary {
+        width: 25%;
+    }
+
+    .mainContent {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 1175px) {
+    .mainForm__calcs__fields--rate input {
+        width: 25%;
+    }
+
+    .mainForm__calcs__fields--cat input {
+        max-width: 38%;
+    }
+
+    .mainForm__calcs__fields--total input {
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 960px) {
+    .mainForm__calcs__fields--rate input, .mainForm__calcs__fields--cat input, .mainForm__calcs__fields--total input {
+        width: 100%;
+        max-width: 80%;
+    }
+
+    .mainForm__label--howPay {
+        float: none;
+    }
+    .mainContent_options {
+        float: none;
+        padding: 1em 0em;
+    }
+
+    .mainContact__form__holder {
+        width: 100%;
+    }
+
+    .mainContact__form__info__name, .mainContact__form__info__age {
+        float: none;
+    }
+
+    .mainContact__form__info__name, .mainContact__form__info__age {
+        width: 95%;
+    }
+
+    .mainContact__form__info {
+        float:none;
+    }
+
+    .mainContact__form__info:nth-child(1) {
+        width: 95%;
+    }
+
+    .input-control--phone {
+        width: 100%;
+    }
+
+    .mainContact__form__info:nth-child(2) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .mainContact__form__info:nth-child(3) {
+        float: none;
+        width: 98%;
+    }
+
+    .mainContact__send {
+        float: none;
+        width: 100%;
+    }
+
+    .mainContact__btnSend {
+        margin-right: .8em;
+    }
+
+
+}
+@media only screen and (max-width: 834px) {
+    .mainForm__label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    .custom-label-payment {
+        margin-right: 5px;
+    }
+}
+@media only screen and (max-width: 680px) {
+
+    .mainContent {
+        float: none;
+        width: 100%;
+    }
+
+    .secundary {
+        float: none;
+        height: auto;
+        width: 100%;
+    }
+
+    .secundary__phrase__title--small {
+        display: inline-block;
+    }
+    .secundary__phrase__title--big, .secundary__phrase__title--medium {
+        display: inline-block;
+        font-size: 2em;
+    }
+
+    .secundary__phrase, .secundary__img, .secundary__promotion {
+        text-align: center;
+    }
+
+    .secundary__img img {
+        max-width: 120px;
+    }
+
+    .secundary--padding {
+        padding: 8.2em 1em 1em 1em;
+    }
+
+
+}
+@media only screen and (max-width: 460px) {
+
+    .mainForm__calcs__fields--rate, .mainForm__calcs__fields--cat, .mainForm__calcs__fields--total {
+        float: none;
+        width: 100%;
+    }
+
+    .mainForm__calcs__fields--rate input, .mainForm__calcs__fields--cat input, .mainForm__calcs__fields--total input {
+        display: block;
+        width: 98%;
+    }
+
+    .mainForm__calcs__fields--total {
+        text-align: left;
+    }
+
+    .mainContact__form__wrap {
+        padding: 1em 1.5em 1em 1em;
+    }
+
+}
+@media only screen and  (min-width: 1400px) {
+    .form--medium {
+        width: 80%;
+    }
+}
+@media only screen and  (min-width: 1800px) {
+
+    .mainForm__calcs__fields--rate input {
+        width: 53%;
+        max-width: 100%;
+    }
+
+    .mainForm__calcs__fields--cat input {
+        max-width: 60%;
+    }
+
+    .mainForm__calcs__fields--total input {
+        width: 65%;
+    }
+
+
+}
+@media (min-width: 2400px) {
+
+    .mainForm__calcs__fields--rate input {
+        width: 63%;
+        max-width: 100%;
+    }
+
+    .mainForm__calcs__fields--cat input {
+        max-width: 68%;
+    }
+
+    .mainForm__calcs__fields--total input {
+        width: 70%;
+    }
+
+    .mainForm__fieldset {
+        padding: 2em 6em 1em;
+    }
+
+
+}

@@ -2,17 +2,16 @@ var MainForm = function () {
 
     var numberUtils = new NumberUtils();
 
-    var montoInputText = document.getElementById('mount');
-    var semanasInputText = document.getElementById('weeks');
-
-    var tasaInteresAnualInputText = document.getElementById('');
-    var CATInputText = document.getElementById('');
-    var totalPagarInputText = document.getElementById('');
-
-
-
-
-    var monto, semanas;
+    var txtMonto = $("#txtMonto");
+    var hiddenMonto = $("#hiddenMonto");
+    var txtSemanas = $("#txtSemanas");
+    var txtTasaInteres = $("#txtTasaInteres");
+    var txtCAT = $("#txtCAT");
+    var txtTotalPagar = $("#txtTotalPagar");
+    var txtNombre = $("#txtNombre");
+    var txtEdad = $("#txtEdad");
+    var txtTelefono = $("#txtTelefono");
+    var ddlEstados = $("#ddlEstados");
 
     this.init = function () {
         initPlugins();
@@ -23,28 +22,26 @@ var MainForm = function () {
 
         var montoDragdealer = new Dragdealer('slider-mount', {
             animationCallback: function (x, y) {
-                var lowVal = 1500;
-                var highVal = 50000;
-                var diff = highVal - lowVal;
-                var thisVal = (Math.round(x * diff) + lowVal);
+                var minValue = 1500;
+                var maxVal = 50000;
+                var diff = maxVal - minValue;
+                var value = (Math.round(x * diff) + minValue);
 
-                montoInputText.value = numberUtils.moneyFormat(thisVal);
-                monto = thisVal;
-
-
+                txtMonto.val(numberUtils.moneyFormat(value));
+                hiddenMonto.val(value);
             }
 
         });
 
         var semanasDragdealer = new Dragdealer('slider-timelimit', {
             animationCallback: function (x, y) {
-                var lowVal = 13;
-                var highVal = 52;
-                var diff = highVal - lowVal;
-                var thisVal = (Math.round(x * diff) + lowVal);
+                var minValue = 13;
+                var maxVal = 52;
+                var diff = maxVal - minValue;
+                var value = (Math.round(x * diff) + minValue);
 
-                semanasInputText.value = numberUtils.moneyFormat(thisVal);
-                semanas = thisVal;
+                txtSemanas.val(value);
+
 
             }
 
@@ -53,7 +50,59 @@ var MainForm = function () {
     }
 
     function bindEvents() {
+        $("#form-contact").submit(sendInformation);
+    }
 
+    function sendInformation(event) {
+        event.preventDefault();
+
+        if(validate()) {
+            var periodo = $("input[name='rdbtnPeriodo']:checked").val();
+            var tipoTelefono = $("input[name='rrdbtnTipoTelefono']:checked").val();
+
+            var data = {
+                monto: hiddenMonto.val(),
+                periodo: periodo,
+                plazo: txtSemanas.val(),
+                tasaInteres: txtTasaInteres.val(),
+                cat: txtCAT.val(),
+                totalPagar: txtTotalPagar.val(),
+                nombre: txtNombre.val(),
+                edad: txtEdad.val(),
+                telefono: txtTelefono.val(),
+                tipoTelefono: tipoTelefono,
+                estado: ddlEstados.val()
+            };
+
+            alert(JSON.stringify(data));
+
+            //Aqui se puede cambiar la funcionalidad para que se envia la informacion del formulario
+        }
+
+    }
+
+    function validate() {
+
+        if(txtNombre.val().trim().length <= 5) {
+            alert("Debes ingresar un nombre válido.");
+            txtNombre.focus();
+            return false;
+        }
+
+        if(txtEdad.val() < 18) {
+            alert("Debes de ser mayor de edad.");
+            txtEdad.focus();
+            return false;
+        }
+
+        if(txtTelefono.val().trim().length < 8) {
+            alert("Debes ingresar un número telefónico válido.");
+            txtTelefono.focus();
+            return false;
+        }
+
+
+        return true;
     }
 
 };
@@ -76,8 +125,7 @@ var NumberUtils = function () {
     }
 };
 
-window.onload = function () {
+$(document).on("ready", function () {
     var mainForm = new MainForm();
     mainForm.init();
-    
-};
+})
